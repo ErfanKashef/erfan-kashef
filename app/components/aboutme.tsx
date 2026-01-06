@@ -68,7 +68,7 @@ Lately, I’ve been working on interactive projects such as restaurant menus, pr
           y: floatY,
           transformStyle: "preserve-3d",
         }}
-        className="col-span-3 row-span-2 bg-glass-bg p-5 rounded-lg flex flex-col gap-4 cursor-pointer "
+        className="col-span-1 md:col-span-4 md:row-span-2 bg-glass-bg p-5 rounded-lg flex flex-col gap-4 cursor-pointer "
       >
         <Badge variant="outline" className="text-gray-300">
           About Me
@@ -82,19 +82,24 @@ Lately, I’ve been working on interactive projects such as restaurant menus, pr
 
       {popupVisible && (
         <div
-          className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4"
+          className="fixed inset-0 bg-black/95 flex items-center justify-center z-50 p-4"
           onClick={() => setPopupVisible(false)}
         >
           <div
-            className="relative bg-glass-bg text-white max-w-3xl w-full p-6 rounded-lg"
+            className="relative bg-glass-bg text-white max-w-3xl w-full p-6 rounded-lg overflow-y-auto max-h-[90dvh]"
             onClick={(e) => e.stopPropagation()}
+            style={{ WebkitOverflowScrolling: "touch" }}
+            role="dialog"
+            aria-modal="true"
+            aria-label="About me"
           >
-            {fullText}
+            <div className="whitespace-pre-wrap">{fullText}</div>
             <button
-              className="absolute top-4 right-4"
+              aria-label="Close"
+              className="absolute top-4 right-4 p-3 rounded hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
               onClick={() => setPopupVisible(false)}
             >
-              <IconX />
+              <IconX className="h-5 w-5 text-white" />
             </button>
           </div>
         </div>
