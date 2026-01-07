@@ -85,7 +85,7 @@ const Friends = () => {
             return (
               <motion.div
                 key={friend.id}
-                className="absolute top-0 cursor-pointer"
+                className="absolute top-0"
                 style={{
                   left: index * getOffset(),
                   zIndex: isHovered ? 50 : index,

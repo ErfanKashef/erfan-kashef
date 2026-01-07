@@ -7,6 +7,7 @@ import {
   IconMail,
 } from "@tabler/icons-react";
 import { motion, useMotionValue, useSpring } from "motion/react";
+import Link from "next/link";
 
 const items = [
   {
@@ -80,40 +81,25 @@ export default function MediaCard() {
         {items.map((item, i) => {
           const Icon = item.icon;
           return (
-            <a
+            <Link
               key={i}
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="
-            group relative flex flex-col items-center justify-center
-            rounded-lg bg-black/30 hover:bg-black/55
-            transition-all duration-200 ease-out
-          "
+              className="group relative flex flex-col items-center justify-center rounded-lg bg-black/30 hover:bg-black/55 transition-all duration-200 ease-out"
             >
               {/* soft glow */}
               <span className="pointer-events-none absolute inset-0 rounded-lg bg-black/55 opacity-0 group-hover:opacity-100 transition" />
 
               <Icon
                 size={42}
-                className="
-              text-white mt-2
-              transition-transform duration-200 ease-out
-              group-hover:-translate-y-1 group-hover:rotate-[-3deg]
-            "
+                className="text-white mt-2 transition-transform duration-200 ease-out group-hover:-translate-y-1 group-hover:rotate-[-3deg]"
               />
 
-              <span
-                className="
-              text-xs text-white/70
-              opacity-0 translate-y-1
-              group-hover:opacity-100 group-hover:translate-y-0
-              transition-all duration-200 ease-out
-            "
-              >
+              <span className="text-xs text-white/70 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 ease-out">
                 {item.label}
               </span>
-            </a>
+            </Link>
           );
         })}
       </div>
