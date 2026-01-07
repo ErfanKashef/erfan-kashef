@@ -96,7 +96,7 @@ Lately, I’ve been working on interactive projects such as restaurant menus, pr
             <div className="whitespace-pre-wrap">{fullText}</div>
             <button
               aria-label="Close"
-              className="absolute top-4 right-4 p-3 rounded hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+              className="absolute top-4 right-4 p-3 rounded cursor-pointer "
               onClick={() => setPopupVisible(false)}
             >
               <IconX className="h-5 w-5 text-white" />

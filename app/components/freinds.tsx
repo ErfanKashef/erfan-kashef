@@ -99,7 +99,7 @@ const Friends = () => {
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                <Avatar className="h-20 w-20 border-2 border-gray-600">
+                <Avatar className="h-18 w-18 border-2 border-gray-600">
                   <AvatarImage src={friend.avatar} />
                   <AvatarFallback>
                     {friend.name.slice(0, 2).toUpperCase()}
