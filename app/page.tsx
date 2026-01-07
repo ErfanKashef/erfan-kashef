@@ -1,5 +1,6 @@
 import AboutMe from "./components/aboutme";
 import Friends from "./components/freinds";
+import Media from "./components/media";
 
 export default function Home() {
   return (
@@ -10,9 +11,7 @@ export default function Home() {
         <div className="md:col-span-4 md:row-span-2 md:col-start-3 md:row-start-3 bg-glass-bg rounded-lg p-5">
           <p>proche</p>
         </div>
-        <div className="md:col-span-2 md:row-span-2 md:col-start-1 md:row-start-3 bg-glass-bg rounded-lg p-5">
-          media
-        </div>
+        <Media />
         <div className="col-span-1 md:col-span-3 md:row-span-2 md:row-start-5 bg-glass-bg rounded-lg p-5">
           skils
         </div>

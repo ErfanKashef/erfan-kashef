@@ -37,10 +37,6 @@ Lately, I’ve been working on interactive projects such as restaurant menus, pr
     y.set(0);
   }
 
-  // Shadow styles
-  const baseShadow = "0 8px 20px rgba(0,0,0,0.18)";
-  const hoverShadow = "0 12px 28px rgba(0,0,0,0.25)";
-
   return (
     <>
       <motion.div
@@ -56,11 +52,6 @@ Lately, I’ve been working on interactive projects such as restaurant menus, pr
         }}
         onMouseMove={handleMouseMove}
         onMouseLeave={reset}
-        initial={{ boxShadow: baseShadow }}
-        whileHover={{
-          boxShadow: hoverShadow,
-          scale: 1.02,
-        }}
         transition={{ type: "spring", stiffness: 120, damping: 20 }}
         style={{
           rotateX,
